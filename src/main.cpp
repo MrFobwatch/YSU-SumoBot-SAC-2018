@@ -14,6 +14,10 @@ discharge. */
 
 #include "ysuZumo.h"
 
+Zumo32U4ButtonA buttonA;
+Zumo32U4ButtonC buttonC;
+Zumo32U4LCD lcd;
+Zumo32U4Buzzer buzzer;
 void setup()
 {
 
@@ -21,5 +25,19 @@ void setup()
 
 void loop()
 {
-  myBattery.printVoltage();
+  lcd.clear();
+  lcd.print(F("Press A"));
+  lcd.gotoXY(0,1);
+  lcd.print("Battery");
+
+  if(buttonA.isPressed()){
+    myBattery.printVoltage();
+  }
+
+  if(buttonC.isPressed()) {
+    buzzer.playNote(NOTE_B(6), 100, 12);
+    delay(100);
+    buzzer.playNote(NOTE_E(7), 250, 12);
+  }
+  delay(100);
 }
