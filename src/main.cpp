@@ -18,6 +18,10 @@ discharge. */
 Zumo32U4ButtonA buttonA;
 Zumo32U4ButtonB buttonB;
 Zumo32U4ButtonC buttonC;
+L3G gyro;
+LSM303 compass;
+Zumo32U4Encoders encoders;
+Zumo32U4Motors motors;
 Zumo32U4LCD lcd;
 Zumo32U4Buzzer buzzer;
 
@@ -34,7 +38,7 @@ void loop()
   lcd.print("Battery");
 
   if(buttonA.isPressed()){
-    myBattery.printVoltage();
+    battery.printVoltage();
   }
 
   if(buttonC.isPressed()) {
@@ -43,4 +47,5 @@ void loop()
     buzzer.playNote(NOTE_E(7), 250, 11);
   }
   delay(100);
+  // myMotors.setSpeeds();
 }

@@ -8,5 +8,6 @@ public:
   void MotionTest();
 };
 
-
+extern Zumo32U4Encoders encoders;
+extern Zumo32U4Motors motors;
 #endif /* end of include guard: BATTERYLEVEL_H */
