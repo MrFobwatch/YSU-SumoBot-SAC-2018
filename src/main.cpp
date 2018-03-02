@@ -35,9 +35,9 @@ void loop()
   }
 
   if(buttonC.isPressed()) {
-    buzzer.playNote(NOTE_B(6), 100, 12);
+    buzzer.playNote(NOTE_B(6), 100, 11);
     delay(100);
-    buzzer.playNote(NOTE_E(7), 250, 12);
+    buzzer.playNote(NOTE_E(7), 250, 11);
   }
   delay(100);
 }
