@@ -8,5 +8,6 @@ public:
   void printVoltage();
 };
 
-
+extern Zumo32U4ButtonB buttonB;
+extern Zumo32U4LCD lcd;
 #endif /* end of include guard: BATTERYLEVEL_H */

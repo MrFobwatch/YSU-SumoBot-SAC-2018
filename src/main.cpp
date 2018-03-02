@@ -11,13 +11,16 @@ the "On" position.  If the power switch is off, the voltage
 reading displayed by this demo will be low, but it might not be
 zero because the Zumo 32U4 has capacitors that take a while to
 discharge. */
-
+#include <Zumo32U4.h>
 #include "ysuZumo.h"
 
+
 Zumo32U4ButtonA buttonA;
+Zumo32U4ButtonB buttonB;
 Zumo32U4ButtonC buttonC;
 Zumo32U4LCD lcd;
 Zumo32U4Buzzer buzzer;
+
 void setup()
 {
 
