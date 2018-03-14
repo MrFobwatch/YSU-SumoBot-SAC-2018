@@ -37,6 +37,10 @@ void loop()
   lcd.gotoXY(0,1);
   lcd.print("Battery");
 
+  if(buttonB.isPressed()){
+    motionTestMotors.MotionTest();
+  }
+
   if(buttonA.isPressed()){
     battery.printVoltage();
   }
