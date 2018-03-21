@@ -1,3 +1,7 @@
+/.idea
+CMake*
+cmake*
+
 .pioenvs
 .piolibdeps
 .clang_complete
