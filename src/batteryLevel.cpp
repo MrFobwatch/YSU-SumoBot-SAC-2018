@@ -1,6 +1,5 @@
 #include "batteryLevel.h"
 
-
 Battery::Battery() {}
 
 // Print the results to the serial monitor.
