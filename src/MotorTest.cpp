@@ -15,3 +15,7 @@ void Motors::MotorTest() {
   }
 
 }
+
+void Motors::stopRobot() {
+  motors.setSpeeds(0,0);
+}
