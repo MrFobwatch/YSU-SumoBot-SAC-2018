@@ -38,7 +38,7 @@ void loop()
   lcd.print("Battery");
 
   if(buttonB.isPressed()){
-    motionTestMotors.MotionTest();
+    motorTestMotors.MotorTest();
   }
 
   if(buttonA.isPressed()){
