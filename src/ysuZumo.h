@@ -5,6 +5,7 @@
 #include <Zumo32U4.h>
 
 #include "batteryLevel.h"
+#include "fightClub.h"
 #include "MotionTest.h"
 #include "ProxTest.h"
 
