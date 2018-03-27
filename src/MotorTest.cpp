@@ -31,3 +31,7 @@ void Motors::turnRobot(int angle) {
     motors.setSpeeds(-turnSpeed, turnSpeed);
   }
 }
+
+void Motors::stopRobot() {
+  motors.setSpeeds(0,0);
+}
