@@ -6,6 +6,7 @@
 
 #include "batteryLevel.h"
 #include "MotionTest.h"
+#include "ProxTest.h"
 
 Battery battery;
 Motors motionTestMotors;
