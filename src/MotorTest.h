@@ -15,4 +15,5 @@ public:
 
 extern Zumo32U4Encoders encoders;
 extern Zumo32U4Motors motors;
+extern L3G gyro;
 #endif /* end of include guard: MOTORTEST_H */
