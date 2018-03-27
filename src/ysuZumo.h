@@ -6,10 +6,11 @@
 
 #include "batteryLevel.h"
 #include "motionTest.h"
+#include "menu.h"
 
 Battery battery;
 Motors motionTestMotors;
-
+Menu menu;
 
 extern Zumo32U4ButtonA buttonA;
 extern Zumo32U4ButtonB buttonB;
