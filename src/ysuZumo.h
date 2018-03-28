@@ -9,6 +9,7 @@
 
 Battery battery;
 Motors motorTestMotors;
+TurnSensor turnSensor;
 
 
 extern Zumo32U4ButtonA buttonA;

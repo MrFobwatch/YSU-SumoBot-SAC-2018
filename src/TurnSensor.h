@@ -15,10 +15,14 @@ public:
   void turnSensorSetup();
   void turnSensorReset();
   void turnSensorUpdate();
+  uint32_t getTurnAngle();
+  int16_t getTurnRate();
+  uint32_t turnAngle;
+  int16_t turnRate;
+  int16_t gyroOffset;
+  uint16_t gyroLastUpdate;
 };
 
-extern uint32_t turnAngle;
-extern int16_t turnRate;
 extern L3G gyro;
 
 #endif /* end of include guard: TURNSENSOR_H */
