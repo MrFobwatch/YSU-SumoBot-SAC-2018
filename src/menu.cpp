@@ -13,7 +13,7 @@ void Menu::scrollMenu() {
   switch (whichButton())
     {
     case 'A':
-      menu.specificMenu(men);
+      specificMenu(men);
       break;
     case 'B':
       men++;
@@ -85,4 +85,15 @@ void Menu::lcdMenu(int num){
       break;
     }
 
+}
+char whichButton(){
+  if(buttonA.isPressed()){
+    return 'A';
+  }
+  if(buttonB.isPressed()){
+    return 'B';
+  }
+  if(buttonC.isPressed()){
+    return 'C';
+  }
 }

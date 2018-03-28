@@ -10,6 +10,9 @@ Zumo32U4Encoders encoders;
 Zumo32U4Motors motors;
 Zumo32U4LCD lcd;
 Zumo32U4Buzzer buzzer;
+Battery battery;
+Motors motionTestMotors;
+Menu menu;
 
 void setup()
 {

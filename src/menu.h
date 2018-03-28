@@ -1,7 +1,8 @@
 #ifndef MENU_H
 #define MENU_H
 #include <Zumo32U4.h>
-
+#include "batteryLevel.h"
+#include "MotionTest.h"
 
 class Menu {
 public:
@@ -10,9 +11,10 @@ public:
   void specificMenu(int which);
   void lcdMenu(int num);
 };
-extern Zumo32U4Encoders encoders;
-extern Zumo32U4Motors motors;
 extern Zumo32U4ButtonB buttonB;
 extern Zumo32U4ButtonA buttonA;
+extern Zumo32U4ButtonC buttonC;
 extern Zumo32U4LCD lcd;
+extern Battery battery;
+extern Motors motionTestMotors;
 #endif
