@@ -2,24 +2,37 @@
 
 Menu::Menu() {}
 
-int men = 0;
+int men = 1;
 char whichButton();
 
-void Menu::scrollMenu() {
 
+void Menu::scrollMenu() {
   if(men == 7) {
     men = men - 6;
   }
-  switch (whichButton())
-    {
-    case 'A':
-      specificMenu(men);
-      break;
-    case 'B':
-      men++;
-      break;
-    }
+  else if(men==0){
+    men = men + 6;
+  }
+
+  lcdMenu(men);
+  delay(300);
+  whichButton();
+
+
+    switch (whichButton())
+      {
+      case 'A':
+        men--;
+        break;
+      case 'B':
+        specificMenu(men);
+        break;
+      case 'C':
+        men++;
+        break;
+      }
 }
+
 
 void Menu::specificMenu(int men) {
     switch (men) {
@@ -45,48 +58,54 @@ void Menu::specificMenu(int men) {
     }
 }
 
+
 void Menu::lcdMenu(int num){
   switch (num){
     case 1:
       lcd.clear();
-      lcd.print(F("Battery"));
+      lcd.print(F("Bttry[B]"));
       lcd.gotoXY(0,1);
-      lcd.print("A     B->");
+      lcd.print("<-A  C->");
       break;
     case 2:
       lcd.clear();
-      lcd.print(F("Motor Test"));
+      lcd.print(F("Motor[B]"));
       lcd.gotoXY(0,1);
-      lcd.print("A     B->");
+      lcd.print("<-A  C->");
       break;
     case 3:
       lcd.clear();
-      lcd.print(F("Line Test"));
+      lcd.print(F("Line [B]"));
       lcd.gotoXY(0,1);
-      lcd.print("A     B->");
+      lcd.print("<-A  C->");
       break;
     case 4:
       lcd.clear();
-      lcd.print(F("Prox Test"));
+      lcd.print(F("Prox [B]"));
       lcd.gotoXY(0,1);
-      lcd.print("A     B->");
+      lcd.print("<-A  C->");
       break;
     case 5:
       lcd.clear();
-      lcd.print(F("Sound Test"));
+      lcd.print(F("Sound[B]"));
       lcd.gotoXY(0,1);
-      lcd.print("A     B->");
+      lcd.print("<-A  C->");
       break;
     case 6:
       lcd.clear();
-      lcd.print(F("Fight Club"));
+      lcd.print(F("Fight[B]"));
       lcd.gotoXY(0,1);
-      lcd.print("A     B->");
+      lcd.print("<-A  C->");
       break;
     }
 
 }
+
+
 char whichButton(){
+  while(!buttonA.isPressed() && !buttonB.isPressed() && !buttonC.isPressed()){
+    delay(5);
+  }
   if(buttonA.isPressed()){
     return 'A';
   }

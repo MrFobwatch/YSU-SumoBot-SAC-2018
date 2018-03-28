@@ -17,8 +17,10 @@ Menu menu;
 void setup()
 {
   lcd.clear();
-  lcd.print(F("Main Menu"));
-  delay(1500);
+  lcd.print(F("Menu"));
+  lcd.gotoXY(0,1);
+  lcd.print(F("Press A"));
+  buttonA.waitForPress();
 }
 
 void loop()
