@@ -12,13 +12,13 @@ and attempts to face towards that object. */
 
 const uint8_t sensorThreshold = 1;
 
-const uint16_t turnSpeedMax = 400;
+const uint16_t turnSpeedMax = 250;
 
 const uint16_t turnSpeedMin = 100;
 
-const uint16_t deceleration = 10;
+const uint16_t deceleration = 20;
 
-const uint16_t acceleration = 10;
+const uint16_t acceleration = 20;
 
 #define LEFT 0
 #define RIGHT 1
@@ -55,8 +55,11 @@ void stop()
 }
 
 void Fight::fightClub() {
+
   proxSensors.initFrontSensor();
+  while(1){
   proxSensors.read();
+
   uint8_t leftValue = proxSensors.countsFrontWithLeftLeds();
   uint8_t rightValue = proxSensors.countsFrontWithRightLeds();
 
@@ -102,7 +105,8 @@ void Fight::fightClub() {
       }
       else {
         // The values are equal, so stop the motors.
-        stop();
+        delay(100);
+        motors.setSpeeds(200,200);
       }
     }
   else {
@@ -118,6 +122,19 @@ void Fight::fightClub() {
       {
         turnLeft();
       }
-    }
-  }
-extern Zumo32U4ProximitySensors proxSensors;
+
+
+}
+lcd.gotoXY(0, 0);
+lcd.print(leftValue);
+lcd.print(' ');
+lcd.print(rightValue);
+lcd.gotoXY(0, 1);
+lcd.print(turningRight ? 'R' : (turningLeft ? 'L' : ' '));
+lcd.print(' ');
+lcd.print(turnSpeed);
+lcd.print(' ');
+lcd.print(' ');
+}
+}
+//extern Zumo32U4ProximitySensors proxSensors;

@@ -15,7 +15,7 @@ Motors engine;
 Menu menu1;
 Zumo32U4ProximitySensors proxSensors;
 Fight fighter;
-TurnSensor turnSensor;
+//TurnSensor turnSensor;
 
 void setup()
 {
