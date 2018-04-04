@@ -14,6 +14,7 @@ Battery battery;
 Motors engine;
 Menu menu;
 Zumo32U4ProximitySensors proxSensors;
+TurnSensor turnSensor;
 
 void setup()
 {
