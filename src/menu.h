@@ -2,9 +2,10 @@
 #define MENU_H
 
 #include <Zumo32U4.h>
-#include "batteryLevel.h"
-#include "MotionTest.h"
-#include "fightClub.h"
+#include "ysuZumo.h"
+// #include "batteryLevel.h"
+// #include "MotionTest.h"
+// #include "fightClub.h"
 
 class Menu {
 public:
@@ -18,5 +19,5 @@ extern Zumo32U4ButtonA buttonA;
 extern Zumo32U4ButtonC buttonC;
 extern Zumo32U4LCD lcd;
 extern Battery battery;
-extern Motors motionTestMotors;
+extern Motors engine;
 #endif

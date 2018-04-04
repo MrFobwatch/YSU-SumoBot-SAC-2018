@@ -7,8 +7,6 @@ and attempts to face towards that object. */
 #include <Wire.h>
 #include <Zumo32U4.h>
 #include <fightClub.h>
-#include <MotionTest.h>
-#include <ProxTest.h>
 
 
 const uint8_t sensorThreshold = 1;

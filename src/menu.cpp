@@ -40,7 +40,7 @@ void Menu::specificMenu(int men) {
         battery.printVoltage();
         break;
       case 2:
-        motionTestMotors.MotionTest();
+        engine.MotorTest();
         break;
       case 3:
         //lineTest.LineTest();
@@ -115,4 +115,5 @@ char whichButton(){
   if(buttonC.isPressed()){
     return 'C';
   }
+  return 0;
 }

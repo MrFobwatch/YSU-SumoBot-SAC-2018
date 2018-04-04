@@ -8,13 +8,13 @@
 #include "MotorTest.h"
 
 #include "fightClub.h"
-#include "MotionTest.h"
+#include "MotorTest.h"
 #include "menu.h"
 #include "ProxTest.h"
 
-Battery battery;
-Motors motorTestMotors;
-TurnSensor turnSensor;
+// Battery battery;
+// Motors motorTestMotors;
+// TurnSensor turnSensor;
 
 
 extern Zumo32U4ProximitySensors proxSensors;
@@ -28,5 +28,5 @@ extern Zumo32U4Motors motors;
 extern Zumo32U4LCD lcd;
 extern Zumo32U4Buzzer buzzer;
 extern Battery battery;
-extern Motors motionTestMotors;
+extern Motors engine;
 #endif /* end of include guard: YSUZUMO_H */

@@ -1,8 +1,6 @@
 #ifndef FIGHTCLUB_H
 #define FIGHTCLUB_H
 #include <Zumo32U4.h>
-#include <MotionTest.h>
-#include <ProxTest.h>
 
 class Fight {
 public:

@@ -11,7 +11,7 @@ Zumo32U4Motors motors;
 Zumo32U4LCD lcd;
 Zumo32U4Buzzer buzzer;
 Battery battery;
-Motors motionTestMotors;
+Motors engine;
 Menu menu;
 Zumo32U4ProximitySensors proxSensors;
 
