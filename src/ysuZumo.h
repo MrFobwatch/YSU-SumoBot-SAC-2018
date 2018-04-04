@@ -15,7 +15,7 @@
 // Battery battery;
 // Motors motorTestMotors;
 // TurnSensor turnSensor;
-
+// Menu menu1;
 
 extern Zumo32U4ProximitySensors proxSensors;
 extern Zumo32U4ButtonA buttonA;
@@ -27,6 +27,9 @@ extern Zumo32U4Encoders encoders;
 extern Zumo32U4Motors motors;
 extern Zumo32U4LCD lcd;
 extern Zumo32U4Buzzer buzzer;
+//extern Menu menu1;
 extern Battery battery;
 extern Motors engine;
+extern Fight fighter;
+
 #endif /* end of include guard: YSUZUMO_H */

@@ -7,7 +7,7 @@ class Motors {
 public:
   Motors();
   void MotorTest();
-  void turnRobot(int angle);
+  //void turnRobot(int angle);
   void driveStraightTime(int time);
   void driveStraightDistance(int distance);
   void driveStraight();
@@ -17,5 +17,5 @@ public:
 extern Zumo32U4Encoders encoders;
 extern Zumo32U4Motors motors;
 extern L3G gyro;
-extern TurnSensor turnSensor;
+//extern TurnSensor turnSensor;
 #endif /* end of include guard: MOTORTEST_H */

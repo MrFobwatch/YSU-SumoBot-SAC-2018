@@ -12,8 +12,9 @@ Zumo32U4LCD lcd;
 Zumo32U4Buzzer buzzer;
 Battery battery;
 Motors engine;
-Menu menu;
+Menu menu1;
 Zumo32U4ProximitySensors proxSensors;
+Fight fighter;
 
 void setup()
 {
@@ -27,5 +28,5 @@ void setup()
 void loop()
 {
 
-  menu.scrollMenu();
+  menu1.scrollMenu();
 }
