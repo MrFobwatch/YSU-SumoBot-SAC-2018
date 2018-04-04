@@ -52,7 +52,7 @@ void Menu::specificMenu(int men) {
         //soundTest.SoundTest();
         break;
       case 6:
-        //fightClub.FightClub();
+        fighter.fightClub();
         break;
 
     }

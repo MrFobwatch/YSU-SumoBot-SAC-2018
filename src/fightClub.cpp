@@ -9,6 +9,7 @@ and attempts to face towards that object. */
 #include <fightClub.h>
 
 
+
 const uint8_t sensorThreshold = 1;
 
 const uint16_t turnSpeedMax = 400;
@@ -54,7 +55,7 @@ void stop()
 }
 
 void Fight::fightClub() {
-
+  proxSensors.initFrontSensor();
   proxSensors.read();
   uint8_t leftValue = proxSensors.countsFrontWithLeftLeds();
   uint8_t rightValue = proxSensors.countsFrontWithRightLeds();
