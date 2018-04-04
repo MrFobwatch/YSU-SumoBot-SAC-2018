@@ -5,8 +5,9 @@
 #include <Zumo32U4.h>
 
 #include "batteryLevel.h"
-#include "MotionTest.h"
 
+#include "MotionTest.h"
+#include "menu.h"
 Battery battery;
 Motors motionTestMotors;
 
@@ -20,4 +21,6 @@ extern Zumo32U4Encoders encoders;
 extern Zumo32U4Motors motors;
 extern Zumo32U4LCD lcd;
 extern Zumo32U4Buzzer buzzer;
+extern Battery battery;
+extern Motors motionTestMotors;
 #endif /* end of include guard: YSUZUMO_H */
