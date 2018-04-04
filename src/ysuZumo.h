@@ -11,8 +11,9 @@
 
 Battery battery;
 Motors motionTestMotors;
+Zumo32U4ProximitySensors proxSensors;
 
-
+extern Zumo32U4ProximitySensors proxSensors;
 extern Zumo32U4ButtonA buttonA;
 extern Zumo32U4ButtonB buttonB;
 extern Zumo32U4ButtonC buttonC;
