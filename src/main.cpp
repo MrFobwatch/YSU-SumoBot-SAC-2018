@@ -13,6 +13,7 @@ Zumo32U4Buzzer buzzer;
 Battery battery;
 Motors motionTestMotors;
 Menu menu;
+Zumo32U4ProximitySensors proxSensors;
 
 void setup()
 {

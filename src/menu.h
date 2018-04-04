@@ -1,8 +1,10 @@
 #ifndef MENU_H
 #define MENU_H
+
 #include <Zumo32U4.h>
 #include "batteryLevel.h"
 #include "MotionTest.h"
+#include "fightClub.h"
 
 class Menu {
 public:

@@ -7,13 +7,17 @@
 #include "batteryLevel.h"
 #include "MotorTest.h"
 
+#include "fightClub.h"
 #include "MotionTest.h"
 #include "menu.h"
+#include "ProxTest.h"
+
 Battery battery;
 Motors motorTestMotors;
 TurnSensor turnSensor;
 
 
+extern Zumo32U4ProximitySensors proxSensors;
 extern Zumo32U4ButtonA buttonA;
 extern Zumo32U4ButtonB buttonB;
 extern Zumo32U4ButtonC buttonC;
