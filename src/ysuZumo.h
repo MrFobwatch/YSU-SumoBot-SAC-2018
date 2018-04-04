@@ -5,8 +5,12 @@
 #include <Zumo32U4.h>
 
 #include "batteryLevel.h"
-#include "motionTest.h"
+
+#include "MotionTest.h"
 #include "menu.h"
+Battery battery;
+Motors motionTestMotors;
+
 
 extern Zumo32U4ButtonA buttonA;
 extern Zumo32U4ButtonB buttonB;
