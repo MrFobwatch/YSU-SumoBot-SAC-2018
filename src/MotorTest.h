@@ -7,10 +7,10 @@ class Motors {
 public:
   Motors();
   void MotorTest();
-  //void turnRobot(int angle);
-  void driveStraightTime(int time);
-  void driveStraightDistance(int distance);
-  void driveStraight();
+  void turnRobot(int angle);
+//  void driveStraightTime(int time);
+//  void driveStraightDistance(int distance);
+//  void driveStraight();
   void stopRobot();
 };
 
