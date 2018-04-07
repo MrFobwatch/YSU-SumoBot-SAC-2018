@@ -55,40 +55,41 @@ void stop()
 }
 
 void Fight::fightClub() {
-
+  // delay(5000);
+  delay(100);
   proxSensors.initFrontSensor();
-  while(1){
-  proxSensors.read();
+  while(true){
+    proxSensors.read();
 
-  uint8_t leftValue = proxSensors.countsFrontWithLeftLeds();
-  uint8_t rightValue = proxSensors.countsFrontWithRightLeds();
+    uint8_t leftValue = proxSensors.countsFrontWithLeftLeds();
+    uint8_t rightValue = proxSensors.countsFrontWithRightLeds();
 
-  // Determine if an object is visible or not.
-  bool objectSeen = leftValue >= sensorThreshold || rightValue >= sensorThreshold;
+    // Determine if an object is visible or not.
+    bool objectSeen = leftValue >= sensorThreshold || rightValue >= sensorThreshold;
 
-  if (objectSeen) {
-    // An object is visible, so we will start decelerating in
-    // order to help the robot find the object without
-    // overshooting or oscillating.
-    turnSpeed -= deceleration;
-  }
-  else {
-    // An object is not visible, so we will accelerate in order
-    // to help find the object sooner.
-    turnSpeed += acceleration;
-  }
+    if (objectSeen) {
+      // An object is visible, so we will start decelerating in
+      // order to help the robot find the object without
+      // overshooting or oscillating.
+      turnSpeed -= deceleration;
+    }
+    else {
+      // An object is not visible, so we will accelerate in order
+      // to help find the object sooner.
+      turnSpeed += acceleration;
+    }
 
-  // Constrain the turn speed so it is between turnSpeedMin and
-  // turnSpeedMax.
-  turnSpeed = constrain(turnSpeed, turnSpeedMin, turnSpeedMax);
+    // Constrain the turn speed so it is between turnSpeedMin and
+    // turnSpeedMax.
+    turnSpeed = constrain(turnSpeed, turnSpeedMin, turnSpeedMax);
 
-  if (objectSeen) {
-    // An object seen.
-    ledYellow(1);
+    if (objectSeen) {
+      // An object seen.
+      ledYellow(1);
 
-    lastTimeObjectSeen = millis();
+      lastTimeObjectSeen = millis();
 
-    bool lastTurnRight = turnRight;
+      bool lastTurnRight = turnRight;
 
       if (((leftValue)+.35) < ((rightValue))) {
         // The right value is greater, so the object is probably
@@ -115,14 +116,14 @@ void Fight::fightClub() {
     // that we last sensed the object.
     ledYellow(0);
 
-      if (senseDir == RIGHT)
-      {
-        turnRight();
-      }
-      else
-      {
-        turnLeft();
-      }
+        if (senseDir == RIGHT)
+        {
+          turnRight();
+        }
+        else
+        {
+          turnLeft();
+        }
 
 
 }
