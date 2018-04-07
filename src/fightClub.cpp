@@ -16,9 +16,9 @@ const uint16_t turnSpeedMax = 250;
 
 const uint16_t turnSpeedMin = 100;
 
-const uint16_t deceleration = 20;
+const uint16_t deceleration = 30;
 
-const uint16_t acceleration = 20;
+const uint16_t acceleration = 10;
 
 #define LEFT 0
 #define RIGHT 1
@@ -106,7 +106,7 @@ void Fight::fightClub() {
       else {
         // The values are equal, so stop the motors.
         delay(100);
-        motors.setSpeeds(200,200);
+        motors.setSpeeds(100,100);
       }
     }
   else {
