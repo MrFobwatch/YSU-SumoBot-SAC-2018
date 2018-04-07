@@ -33,6 +33,10 @@ uint16_t turnSpeed = turnSpeedMax;
 
 uint16_t lastTimeObjectSeen = 0;
 
+int leftprox;
+
+int rightprox;
+
 void turnRight()
 {
   motors.setSpeeds(turnSpeed,-turnSpeed);
@@ -91,7 +95,7 @@ void Fight::fightClub() {
 
       bool lastTurnRight = turnRight;
 
-      if (((leftValue)+.35) < ((rightValue))) {
+      if (((leftValue)+.25) < ((rightValue))) {
         // The right value is greater, so the object is probably
         // closer to the robot's right LEDs, which means the robot
         // is not facing it directly.  Turn to the right to try to
@@ -99,7 +103,7 @@ void Fight::fightClub() {
         turnRight();
         senseDir = RIGHT;
       }
-      else if ((leftValue-.35) > (rightValue)) {
+      else if ((leftValue-.25) > (rightValue)) {
         // The left value is greater, so turn to the left.
         turnLeft();
         senseDir = LEFT;
@@ -107,6 +111,11 @@ void Fight::fightClub() {
       else {
         // The values are equal, so stop the motors.
         motors.setSpeeds(300,300);
+          while(leftprox >= 6 && rightprox>= 6){
+            motors.setSpeeds(400,400);
+            leftprox=proxSensors.countsFrontWithLeftLeds();
+            rightprox=proxSensors.countsFrontWithRightLeds();
+          }
       }
     }
 

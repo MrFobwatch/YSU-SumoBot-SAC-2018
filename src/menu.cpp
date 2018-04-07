@@ -53,7 +53,12 @@ void Menu::specificMenu(int men) {
         while(buzzer.isPlaying());
         break;
       case 6:
-        fighter.fightClub();
+        for(int i = 1; i<= 4; i++) {
+        buzzer.playNote(NOTE_G(4),60, 15);
+        delay(1000);
+        }
+        buzzer.playNote(NOTE_G(5),120,15);
+      fighter.fightClub();
         break;
 
     }
