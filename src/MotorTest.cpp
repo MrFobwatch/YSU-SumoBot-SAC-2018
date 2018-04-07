@@ -15,30 +15,30 @@ void Motors::MotorTest() {
   //   motors.setSpeeds(i,i);
   //   delay(500);
   // }
-  // turnRobot(45);
-  // delay(10);
-  // turnRobot(-45);
-  // delay(10);
-  // turnRobot(180);
-  // delay(10);
-  // turnRobot(-90);
-  // delay(10);
-  // turnRobot(270);
+  turnRobot(45);
+  delay(50);
+  turnRobot(-45);
+  delay(50);
+  turnRobot(180);
+  delay(50);
+  turnRobot(-90);
+  delay(50);
+  turnRobot(270);
 
 }
 
- // void Motors::turnRobot(int angle) {
-   // // turnSensor.turnSensorReset();
-   // while (angle > turnSensor.getTurnAngle()) {
-   //   //Read the gyro to update turnAngle, the estimation of how far the robot has turned
-   //   //and turnRate, the estimation of how fast it's turning
-   //   turnSensor.turnSensorUpdate();
-   //   // Calculate the motor turn speed using proportional
-   //   // derivative PID terms.  Here we are a using a
-   //   // constant of 56 and a derivative constant of 1/20
-   //  int32_t turnSpeed = -(int32_t)(turnSensor.getTurnAngle()) / (turnAngle1 / 56) - (turnSensor.getTurnRate() )/ 20;
-   //   // Constrain our motor speeds to be between -maxSpeed and maxSpeed
-   //   turnSpeed = constrain(turnSpeed, -200, 200);
-   //   motors.setSpeeds(-turnSpeed, turnSpeed);
-   // }
- // }
+ void Motors::turnRobot(int angle) {
+   // turnSensor.turnSensorReset();
+   while (angle > turnSensor.getTurnAngle()) {
+     //Read the gyro to update turnAngle, the estimation of how far the robot has turned
+     //and turnRate, the estimation of how fast it's turning
+     turnSensor.turnSensorUpdate();
+     // Calculate the motor turn speed using proportional
+     // derivative PID terms.  Here we are a using a
+     // constant of 56 and a derivative constant of 1/20
+    int32_t turnSpeed = -(int32_t)(turnSensor.getTurnAngle()) / (turnAngle1 / 56) - (turnSensor.getTurnRate() )/ 20;
+     // Constrain our motor speeds to be between -maxSpeed and maxSpeed
+     turnSpeed = constrain(turnSpeed, -200, 200);
+     motors.setSpeeds(-turnSpeed, turnSpeed);
+   }
+ }

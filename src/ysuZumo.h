@@ -11,8 +11,7 @@
 #include "MotorTest.h"
 #include "menu.h"
 #include "ProxTest.h"
-
-const char jeopardy[] = "!O5 V8 C F C O4 F O5 C F C2 C F C F A. G8 F8 E8 D8 L8 D- C F C <F C F C2 F. D C O4 B- A G F";
+const char jeopardy[] = "!O5 V10 C F C O4 F O5 C F C2 C F C F A. G8 F8 E8 D8 L8 D- L4 C F C <F C F C2 F. D8 C O4 B- A G F";
 
 // Battery battery;
 // Motors motorTestMotors;
