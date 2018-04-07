@@ -12,7 +12,7 @@ and attempts to face towards that object. */
 
 const uint8_t sensorThreshold = 1;
 
-const uint16_t turnSpeedMax = 300;
+const uint16_t turnSpeedMax = 400;
 
 const uint16_t turnSpeedMin = 100;
 
@@ -60,7 +60,7 @@ void stop()
 
 void Fight::fightClub() {
   // delay(5000);
-  delay(100);
+
   proxSensors.initFrontSensor();
   while(true){
     proxSensors.read();
@@ -95,7 +95,7 @@ void Fight::fightClub() {
 
       bool lastTurnRight = turnRight;
 
-      if (((leftValue)+.25) < ((rightValue))) {
+      if (((leftValue)+.35) < ((rightValue))) {
         // The right value is greater, so the object is probably
         // closer to the robot's right LEDs, which means the robot
         // is not facing it directly.  Turn to the right to try to
@@ -103,18 +103,18 @@ void Fight::fightClub() {
         turnRight();
         senseDir = RIGHT;
       }
-      else if ((leftValue-.25) > (rightValue)) {
+      else if ((leftValue-.35) > (rightValue)) {
         // The left value is greater, so turn to the left.
         turnLeft();
         senseDir = LEFT;
       }
       else {
         // The values are equal, so stop the motors.
-        motors.setSpeeds(300,300);
-          while(leftprox >= 6 && rightprox>= 6){
+        motors.setSpeeds(400,400);
+          while(leftprox >= .5 && rightprox>= .5){
             motors.setSpeeds(400,400);
-            leftprox=proxSensors.countsFrontWithLeftLeds();
-            rightprox=proxSensors.countsFrontWithRightLeds();
+            leftprox = proxSensors.countsFrontWithLeftLeds();
+            rightprox = proxSensors.countsFrontWithRightLeds();
           }
       }
     }
