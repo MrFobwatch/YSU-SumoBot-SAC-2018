@@ -49,7 +49,8 @@ void Menu::specificMenu(int men) {
         //proxTest.ProxTest();
         break;
       case 5:
-        //soundTest.SoundTest();
+        buzzer.play(jeopardy);
+        while(buzzer.isPlaying());
         break;
       case 6:
         fighter.fightClub();

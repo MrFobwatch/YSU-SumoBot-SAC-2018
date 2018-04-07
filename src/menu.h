@@ -14,6 +14,7 @@ public:
   void specificMenu(int which);
   void lcdMenu(int num);
 };
+extern Zumo32U4Buzzer buzzer;
 extern Zumo32U4ButtonB buttonB;
 extern Zumo32U4ButtonA buttonA;
 extern Zumo32U4ButtonC buttonC;
