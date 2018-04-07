@@ -4,7 +4,7 @@ Battery::Battery() {}
 
 // Print the results to the serial monitor.
 void Battery::printVoltage() {
-  while(!buttonB.isPressed()){
+  while(true){
     delay(100);
     lcd.clear();
     lcd.print(readBatteryMillivolts());
