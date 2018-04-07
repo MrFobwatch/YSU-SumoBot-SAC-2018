@@ -12,11 +12,11 @@ and attempts to face towards that object. */
 
 const uint8_t sensorThreshold = 1;
 
-const uint16_t turnSpeedMax = 250;
+const uint16_t turnSpeedMax = 300;
 
 const uint16_t turnSpeedMin = 100;
 
-const uint16_t deceleration = 30;
+const uint16_t deceleration = 10;
 
 const uint16_t acceleration = 10;
 
@@ -90,7 +90,7 @@ void Fight::fightClub() {
 
     bool lastTurnRight = turnRight;
 
-      if (leftValue < rightValue) {
+      if (((leftValue)+.35) < ((rightValue))) {
         // The right value is greater, so the object is probably
         // closer to the robot's right LEDs, which means the robot
         // is not facing it directly.  Turn to the right to try to
@@ -98,17 +98,18 @@ void Fight::fightClub() {
         turnRight();
         senseDir = RIGHT;
       }
-      else if (leftValue > rightValue) {
+      else if ((leftValue-.35) > (rightValue)) {
         // The left value is greater, so turn to the left.
         turnLeft();
         senseDir = LEFT;
       }
       else {
         // The values are equal, so stop the motors.
-        delay(100);
-        motors.setSpeeds(100,100);
+        motors.setSpeeds(300,300);
       }
     }
+
+
   else {
     // No object is seen, so just keep turning in the direction
     // that we last sensed the object.
